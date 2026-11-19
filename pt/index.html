@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grupo Samba dos Amigos · Samba e pagode ao vivo na Galícia</title>
+<meta name="description" content="Grupo de samba brasileiro com seis músicos. Casamentos, shows, festivais, festas e casas noturnas na Corunha, Galícia, resto da Espanha e Portugal. Peça seu orçamento pelo WhatsApp.">
+<meta name="theme-color" content="#0b0909">
+<meta property="og:type" content="website"><meta property="og:title" content="Grupo Samba dos Amigos · Samba e pagode ao vivo na Galícia"><meta property="og:description" content="Grupo de samba brasileiro com seis músicos. Casamentos, shows, festivais, festas e casas noturnas na Corunha, Galícia, resto da Espanha e Portugal. Peça seu orçamento pelo WhatsApp."><meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="../img/favicon.png" type="image/png">
+<link rel="preload" href="../fonts/barlow-condensed-latin-800-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../img/grupo-sofa.webp" as="image" fetchpriority="high">
+<style>/* VOICE: noite de roda — preto de palco, vermelho do logo, energia de pagode com acabamento elegante
+   IDEA: cartaz de show — tipografia condensada inclinada como o logo, foto colada sobre bloco vermelho
+   TYPE: Barlow Condensed 800 itálico (títulos, eco do logo) + Barlow (texto) + Instrument Serif itálico (voz/assinatura) */
+@font-face{font-family:"Barlow Condensed";src:url(../fonts/barlow-condensed-latin-800-italic.woff2) format("woff2");font-weight:800;font-style:italic;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url(../fonts/barlow-condensed-latin-700-italic.woff2) format("woff2");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"Barlow Condensed";src:url(../fonts/barlow-condensed-latin-600-normal.woff2) format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Barlow";src:url(../fonts/barlow-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Barlow";src:url(../fonts/barlow-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Barlow";src:url(../fonts/barlow-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Instrument Serif";src:url(../fonts/instrument-serif-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+:root{
+ --black:#0b0909;--black2:#141010;--black3:#1d1717;
+ --white:#f7f2ee;--mute:#b3a8a2;--mute2:#8a7f7a;--line:rgba(247,242,238,.12);
+ --red:#e1121b;--red-d:#b80d14;--red-hi:#ff4141;
+ --wa:#25d366;
+ --cond:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+ --sans:"Barlow","Helvetica Neue",Arial,sans-serif;
+ --serif:"Instrument Serif",Georgia,serif;
+ --ease:cubic-bezier(.16,1,.3,1);
+ --wrap:1280px;--pad:clamp(20px,4.5vw,56px);
+ --sec:clamp(88px,11vw,152px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:hidden;scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%;scrollbar-color:var(--red) var(--black)}
+body{margin:0;overflow-x:clip;background:var(--black);color:var(--white);font:400 1.0625rem/1.62 var(--sans);-webkit-font-smoothing:antialiased;caret-color:var(--red-hi);accent-color:var(--red);font-variant-numeric:tabular-nums}
+::selection{background:var(--red);color:#fff}
+::-webkit-scrollbar{width:11px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--red);border-radius:8px;border:3px solid var(--black)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--red-hi);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--cond);font-weight:800;font-style:italic;text-transform:uppercase;margin:0;text-wrap:balance;letter-spacing:-.005em}
+h2{font-size:clamp(2.4rem,4.3vw,3.75rem);line-height:.94}
+h2 em,h1 em{font-style:italic;color:var(--red)}
+p{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--red);color:#fff;padding:.6em 1em;border-radius:8px}
+.skip:focus{top:12px}
+.ic{width:1.15em;height:1.15em;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;padding:1em 1.5em;border-radius:6px;font:600 1rem/1.1 var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .35s var(--ease),color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease);position:relative;overflow:hidden;isolation:isolate}
+.btn:active{transform:translateY(1px) scale(.985)}
+.btn .ic{transition:transform .4s var(--ease)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 30px -16px rgba(225,18,27,.9)}
+.btn-red::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--ease)}
+.btn-red:hover{background:var(--red-d);transform:translateY(-2px)}
+.btn-red:hover::after{transform:translateX(120%)}
+.btn-red:hover .ic:not(:first-child){transform:translateX(4px)}
+.btn-line{border-color:rgba(247,242,238,.4);color:var(--white)}
+.btn-line:hover{border-color:var(--white);background:var(--white);color:var(--black)}
+.btn-line:hover .ic{transform:translate(2px,2px)}
+.btn-black{background:var(--black);color:#fff}
+.btn-black:hover{background:#fff;color:var(--red);transform:translateY(-2px)}
+.btn-sm{padding:.72em 1.15em;font-size:.94rem}
+.btn-full{width:100%}
+
+/* topo */
+.top{position:sticky;top:0;z-index:50;background:rgba(11,9,9,.96);transition:box-shadow .4s var(--ease)}
+.top.is-scrolled{box-shadow:0 1px 0 var(--line)}
+.top-in{display:flex;align-items:center;gap:28px;height:78px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 italic 1.45rem/1 var(--cond);text-transform:uppercase;white-space:nowrap;letter-spacing:.01em}
+.brand img{width:46px;height:46px}
+.links{display:flex;gap:28px;margin-left:auto}
+.links a{text-decoration:none;font:600 1.02rem/1 var(--cond);text-transform:uppercase;letter-spacing:.06em;color:var(--mute);transition:color .25s;padding:.4em 0;position:relative}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.links a:hover{color:var(--white)}
+.links a:hover::after{transform:scaleX(1)}
+.top-act{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1.5px solid var(--line);border-radius:6px;padding:3px}
+.lang a{font:600 .82rem/1 var(--sans);letter-spacing:.06em;text-decoration:none;padding:.55em .75em;border-radius:4px;color:var(--mute)}
+.lang a[aria-current]{background:var(--white);color:var(--black)}
+.lang a:not([aria-current]):hover{color:var(--red-hi)}
+.menu-btn{display:none;width:44px;height:44px;border:0;background:transparent;cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:6px;border-radius:8px}
+.menu-btn i{display:block;width:24px;height:2px;background:var(--white);transition:transform .35s var(--ease)}
+.menu-btn[aria-expanded=true] i:first-of-type{transform:translateY(4px) rotate(45deg)}
+.menu-btn[aria-expanded=true] i:last-of-type{transform:translateY(-4px) rotate(-45deg)}
+.sheet{border-top:1px solid var(--line);background:var(--black)}
+.sheet nav{display:flex;flex-direction:column;padding:10px var(--pad) 30px}
+.sheet a{font:800 italic 2.3rem/1.15 var(--cond);text-transform:uppercase;text-decoration:none;padding:.22em 0;border-bottom:1px solid var(--line)}
+.sheet a:last-child{color:var(--red-hi);border:0}
+
+/* hero */
+.hero{position:relative;padding:clamp(36px,6vw,80px) 0 0;overflow:hidden;background:radial-gradient(60% 70% at 78% 40%,rgba(225,18,27,.16),transparent 70%),var(--black)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:clamp(28px,4vw,64px);align-items:center}
+.hero h1{font-size:clamp(3rem,5.5vw,5rem);line-height:.88;letter-spacing:-.005em}
+.hero h1 .l{display:block;white-space:nowrap}
+.hero h1 em{display:block;font-size:1.62em;line-height:.84;color:var(--red);margin:.03em 0 .02em -.04em}
+.lead{max-width:40ch;margin-top:clamp(22px,2.6vw,30px);font-size:clamp(1.06rem,1.35vw,1.2rem);color:var(--mute);line-height:1.55}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:clamp(26px,3vw,36px)}
+.stage{position:relative;padding:clamp(18px,2.6vw,34px) 0 clamp(18px,2.6vw,34px) clamp(18px,2.6vw,34px)}
+.stage::before{content:"";position:absolute;top:0;bottom:0;left:clamp(56px,9vw,130px);right:-50vw;background:var(--red);animation:wipe 1.2s var(--ease) .1s both}
+.stage-img{position:relative;width:100%;border-radius:4px;box-shadow:0 40px 60px -30px rgba(0,0,0,.75),0 2px 6px rgba(0,0,0,.4);animation:rise 1.2s var(--ease) .25s both}
+.seal{position:absolute;width:clamp(100px,12vw,172px);height:auto;left:-6px;bottom:-34px;transform:rotate(-12deg);filter:drop-shadow(0 18px 18px rgba(0,0,0,.55));animation:stamp 1s var(--ease) .75s both;transition:transform .9s var(--ease)}
+.stage:hover .seal{transform:rotate(4deg) scale(1.04)}
+@keyframes wipe{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
+@keyframes rise{from{transform:translateY(24px)}to{transform:none}}
+@keyframes stamp{from{transform:rotate(-40deg) scale(1.5)}to{transform:rotate(-12deg) scale(1)}}
+.hero-foot{display:flex;justify-content:space-between;align-items:center;gap:18px 40px;flex-wrap:wrap;margin-top:clamp(56px,7vw,92px);padding-top:22px;padding-bottom:26px;position:relative}
+.hero-foot::before{content:"";position:absolute;top:0;left:var(--pad);right:var(--pad);height:1px;background:var(--line)}
+.instr{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 0;font:700 italic clamp(1.15rem,1.6vw,1.45rem)/1 var(--cond);text-transform:uppercase;letter-spacing:.02em}
+.instr li{display:flex;align-items:center}
+.instr li+li::before{content:"";width:6px;height:6px;background:var(--red);transform:rotate(45deg);margin:0 16px}
+.facts{list-style:none;margin:0;padding:0;display:flex;gap:6px 24px;flex-wrap:wrap;font-size:.92rem;color:var(--mute2)}
+
+/* história */
+.story{padding:var(--sec) 0;background:var(--black2)}
+.story-grid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(44px,7vw,110px);align-items:center}
+.story h2{max-width:18ch;margin-bottom:34px}
+.story-txt>p{max-width:58ch;color:var(--mute);margin-top:1em}
+.story blockquote{margin:42px 0 0;padding:0 0 0 26px;border-left:2px solid var(--red)}
+.story blockquote p{font:italic 400 clamp(1.55rem,2.5vw,2.05rem)/1.22 var(--serif);color:var(--white);max-width:32ch}
+.story-img{margin:0;justify-self:end;max-width:460px;width:100%;position:relative}
+.story-img::before{content:"";position:absolute;inset:26px -26px -26px 26px;border:1.5px solid var(--red);border-radius:4px}
+.story-img img{position:relative;border-radius:4px;box-shadow:0 40px 60px -36px rgba(0,0,0,.8)}
+
+/* músicos */
+.members{padding:var(--sec) 0;background:var(--black)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px 64px;flex-wrap:wrap;margin-bottom:clamp(44px,5.5vw,72px)}
+.sec-head h2{max-width:17ch}
+.sec-head p{max-width:44ch;color:var(--mute)}
+.mem-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(44px,5vw,72px) clamp(16px,2.4vw,32px)}
+.member figure{margin:0 0 20px;border-radius:4px;overflow:hidden;background:var(--black3);position:relative}
+.member figure::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.member img{width:100%;transition:transform 1.2s var(--ease)}
+.member:hover img{transform:scale(1.04)}
+.member:hover figure::after{transform:scaleX(1)}
+.member h3{font-size:clamp(2rem,2.9vw,2.6rem);line-height:.95}
+.member .inst{font:italic 400 1.45rem/1.25 var(--serif);color:var(--red-hi);margin-top:6px}
+.member .bio{color:var(--mute2);font-size:.95rem;line-height:1.55;margin-top:12px;max-width:36ch}
+
+/* eventos */
+.events{padding:var(--sec) 0;background:var(--black2)}
+.ev-list{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line)}
+.ev-list li{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:10px 48px;align-items:center;padding:clamp(24px,3vw,36px) clamp(0px,1.4vw,22px);border-top:1px solid var(--line);isolation:isolate}
+.ev-list li::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--red);clip-path:inset(0 100% 0 0);transition:clip-path .7s var(--ease)}
+.ev-list li:hover::before{clip-path:inset(0 0 0 0)}
+.ev-list h3{font-size:clamp(2rem,3.7vw,3.3rem);line-height:.94;transition:transform .7s var(--ease)}
+.ev-list p{color:var(--mute);max-width:40ch;transition:color .5s var(--ease)}
+.ev-list li:hover h3{transform:translateX(10px)}
+.ev-list li:hover p{color:#fff}
+.ev-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;flex-wrap:wrap;margin-top:44px}
+.venues p{font-size:.95rem;color:var(--mute);margin-bottom:14px}
+.venues ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.venues li{border:1px solid var(--line);border-radius:4px;padding:.5em 1em;font:600 1.05rem/1 var(--cond);text-transform:uppercase;letter-spacing:.04em;color:var(--white)}
+
+/* fotos */
+.photos{padding:var(--sec) 0;background:var(--black)}
+.ph-grid{display:grid;grid-template-columns:1.5fr repeat(6,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);align-items:end}
+.ph{margin:0;min-width:0}
+.ph-open{display:block;width:100%;padding:0;border:0;background:var(--black3);border-radius:4px;overflow:hidden;cursor:zoom-in}
+.ph-open img{width:100%;transition:transform .9s var(--ease)}
+.ph-open:hover img{transform:scale(1.04)}
+.ph-dl{display:inline-flex;align-items:center;gap:.45em;margin-top:10px;font-size:.88rem;font-weight:500;color:var(--mute);text-decoration:none;padding:.3em 0}
+.ph-dl:hover{color:var(--red-hi)}
+.ph-dl .ic{transition:transform .3s var(--ease)}
+.ph-dl:hover .ic{transform:translateY(2px)}
+.ph-all{display:flex;justify-content:flex-end;margin-top:30px}
+
+/* faq */
+.faq{padding:var(--sec) 0;background:var(--black2)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,88px)}
+.faq h2{max-width:10ch}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0;cursor:pointer;font:700 italic clamp(1.4rem,2.1vw,1.85rem)/1.1 var(--cond);text-transform:uppercase;transition:color .3s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--red-hi)}
+.faq .pl{transition:transform .45s var(--ease);width:1.1em;height:1.1em;color:var(--red-hi)}
+.faq details[open] .pl{transform:rotate(45deg)}
+.faq details p{color:var(--mute);padding:0 0 26px;max-width:58ch}
+
+/* contato */
+.contact{padding:var(--sec) 0;background:var(--red);color:#fff}
+.ct-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,88px);align-items:start}
+.ct-intro h2{max-width:10ch;font-size:clamp(3rem,6vw,5.2rem)}
+.ct-intro>p{color:#ffe2e0;margin-top:22px;max-width:40ch;font-size:1.1rem}
+.direct{margin-top:42px;padding-top:28px;border-top:1px solid rgba(255,255,255,.3);display:grid;gap:12px;justify-items:start}
+.direct-t{font:italic 400 1.6rem/1.2 var(--serif)}
+.who{font-size:.95rem;color:#ffe2e0}
+.num{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.num a{display:inline-flex;align-items:center;gap:.4em;font:800 italic clamp(2rem,3.4vw,2.7rem)/1 var(--cond);text-decoration:none;user-select:all}
+.num a .ic{width:.8em;height:.8em}
+.num a:hover{color:var(--black)}
+.copy{display:inline-flex;align-items:center;gap:.4em;border:1.5px solid rgba(255,255,255,.5);background:transparent;border-radius:6px;padding:.55em .9em;font:600 .86rem/1 var(--sans);color:#fff;cursor:pointer;transition:background .3s,color .3s}
+.copy:hover{background:#fff;color:var(--red)}
+.copy.ok{background:var(--black);border-color:var(--black)}
+.line-link{display:inline-flex;align-items:center;gap:.6em;text-decoration:none;font-weight:500;word-break:break-all}
+.line-link:hover{text-decoration:underline}
+.quote{background:var(--black);color:var(--white);border-radius:8px;padding:clamp(24px,3.4vw,42px);display:grid;gap:24px;box-shadow:0 50px 80px -40px rgba(60,0,0,.8)}
+.quote fieldset{border:0;margin:0;padding:0;min-width:0}
+.quote legend,.fld>span{display:block;font:700 italic 1.2rem/1 var(--cond);text-transform:uppercase;letter-spacing:.02em;margin-bottom:12px;padding:0}
+.fld small{font:400 .85rem var(--sans);text-transform:none;color:var(--mute2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative;cursor:pointer}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:inline-block;padding:.62em 1.05em;border:1.5px solid var(--line);border-radius:6px;font-size:.95rem;color:var(--mute);transition:background .25s,border-color .25s,color .25s}
+.chip:hover span{border-color:var(--mute);color:var(--white)}
+.chip input:checked+span{background:var(--red);border-color:var(--red);color:#fff}
+.chip input:focus-visible+span{outline:2px solid var(--red-hi);outline-offset:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:block}
+.fld input,.fld textarea{width:100%;font:400 1rem/1.4 var(--sans);color:var(--white);background:var(--black3);border:1.5px solid transparent;border-radius:6px;padding:.85em 1em;transition:border-color .25s;min-height:52px;color-scheme:dark}
+.fld textarea{resize:vertical;min-height:100px}
+.fld input::placeholder,.fld textarea::placeholder{color:var(--mute2)}
+.fld input:hover,.fld textarea:hover{border-color:var(--line)}
+.fld input:focus,.fld textarea:focus{outline:0;border-color:var(--red-hi)}
+.fld input[aria-invalid=true]{border-color:var(--red-hi)}
+.err{color:var(--red-hi);font-size:.92rem;font-weight:500;margin-top:-12px}
+.err:empty{display:none}
+fieldset .err{margin-top:10px}
+
+/* instagram */
+.ig{background:var(--black);padding:clamp(60px,7vw,96px) 0;border-bottom:1px solid var(--line)}
+.ig-in{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.ig h2{font-size:clamp(2.4rem,4.4vw,3.8rem)}
+.ig p{color:var(--mute);margin-top:12px;max-width:44ch}
+.ig .btn{word-break:break-all}
+
+/* rodapé */
+.foot{background:var(--black);color:var(--white);padding:64px 0 calc(28px + env(safe-area-inset-bottom))}
+.foot-in{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:48px}
+.foot-brand{display:flex;gap:22px;align-items:center;max-width:470px}
+.foot-brand img{width:92px;height:92px}
+.foot-brand p{font:italic 400 1.35rem/1.3 var(--serif)}
+.foot-links{display:grid;gap:12px;align-content:start}
+.foot-links a{display:inline-flex;align-items:center;gap:.6em;text-decoration:none;color:var(--mute);word-break:break-all}
+.foot-links a:hover{color:#fff}
+.foot-bot{background:linear-gradient(var(--line),var(--line)) var(--pad) 0/calc(100% - 2*var(--pad)) 1px no-repeat;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:22px;font-size:.88rem;color:var(--mute2);padding-right:calc(var(--pad) + 76px)}
+.foot-bot a{color:var(--white)}
+
+/* whatsapp flutuante */
+.wa-float{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:60;display:flex;align-items:center;gap:0;height:60px;min-width:60px;padding:0 17.5px;border-radius:999px;background:var(--wa);color:#052a14;text-decoration:none;font-weight:600;box-shadow:0 12px 26px -10px rgba(0,0,0,.6);transition:gap .5s var(--ease),transform .35s var(--ease)}
+.wa-float .ic{width:25px;height:25px}
+.wa-float span{max-width:0;overflow:hidden;white-space:nowrap;transition:max-width .6s var(--ease)}
+.wa-float:hover,.wa-float.is-open{gap:10px}
+.wa-float:hover span,.wa-float.is-open span{max-width:220px}
+.wa-float:hover{transform:translateY(-2px)}
+
+/* lightbox */
+.lb{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100dvh;margin:0}
+.lb::backdrop{background:rgba(8,6,6,.94)}
+.lb[open]{display:grid;place-items:center}
+.lb img{max-width:min(92vw,1066px);max-height:88dvh;width:auto;height:auto;border-radius:4px}
+.lb button{position:absolute;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(20,16,16,.6);color:#fff;display:grid;place-items:center;cursor:pointer;transition:background .25s}
+.lb button:hover{background:var(--red)}
+.lb .ic{width:22px;height:22px}
+.lb-x{top:18px;right:18px}
+.lb-prev{left:18px;top:50%;transform:translateY(-50%)}
+.lb-next{right:18px;top:50%;transform:translateY(-50%)}
+
+/* responsivo */
+@media (max-width:1100px){.links{display:none}.menu-btn{display:flex}.top-act{margin-left:auto}}
+@media (max-width:900px){
+ .hero-grid,.story-grid,.ct-grid,.faq-grid{grid-template-columns:1fr}
+ .stage{margin-right:calc(var(--pad) * -1);padding-right:var(--pad)}
+ .story-img{justify-self:start;max-width:400px;width:88%}
+ .mem-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .ev-list li{grid-template-columns:1fr}
+ .ph-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:clamp(150px,30vw,220px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin-right:calc(var(--pad) * -1);padding-right:var(--pad);scrollbar-width:thin}
+ .ph{scroll-snap-align:start}
+}
+@media (max-width:620px){
+ .top-in{height:68px;gap:12px}
+ .brand span{display:none}
+ .top-act .btn-sm{display:none}
+ .hero h1{font-size:clamp(2.6rem,12.4vw,3.6rem)}
+ .hero-cta,.hero-cta .btn{width:100%}
+ .seal{width:92px;bottom:-26px}
+ .hero-foot{margin-top:56px}
+ .instr{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:10px 22px;font-size:1.15rem}
+ .instr li::before,.instr li+li::before{content:"";display:block;width:6px;height:6px;background:var(--red);transform:rotate(45deg);margin:0 9px 0 0}
+ .two{grid-template-columns:1fr}
+ .mem-grid{gap:38px 14px}
+ .member h3{font-size:1.7rem}
+ .member .inst{font-size:1.15rem}
+ .member .bio{font-size:.86rem}
+ .ph-grid{grid-auto-columns:44vw}
+ .ph-all{justify-content:flex-start}
+ .wa-float{height:56px;min-width:56px;padding:0 15.5px}
+ .lb-prev,.lb-next{top:auto;bottom:22px;transform:none}
+ .lb-prev{left:calc(50% - 64px)}.lb-next{right:calc(50% - 64px)}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MusicGroup", "name": "Grupo Samba dos Amigos", "alternateName": "Samba dos Amigos", "genre": ["Samba", "Pagode", "Música brasileña"], "foundingLocation": "A Coruña, Galicia, España", "areaServed": ["Galicia", "España", "Portugal"], "telephone": "+34622298975", "email": "sambadeamigos24@outlook.es", "sameAs": ["https://www.instagram.com/grupo__samba_dos_amigos/"], "description": "Grupo de samba brasileiro com seis músicos. Casamentos, shows, festivais, festas e casas noturnas na Corunha, Galícia, resto da Espanha e Portugal. Peça seu orçamento pelo WhatsApp.", "member": [{"@type": "Person", "name": "Tiago", "roleName": "Cavaquinho e voz"}, {"@type": "Person", "name": "Vinicius", "roleName": "Violão e voz"}, {"@type": "Person", "name": "Boni", "roleName": "Reco-reco e voz"}, {"@type": "Person", "name": "James Walker", "roleName": "Pandeiro"}, {"@type": "Person", "name": "Marcos", "roleName": "Surdo e cuíca"}, {"@type": "Person", "name": "Junior", "roleName": "Tam Tam"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="top" id="top">
+ <div class="wrap top-in">
+  <a class="brand" href="#main" aria-label="Samba dos Amigos"><img src="../img/logo.webp" width="44" height="44" alt=""><span>Samba dos Amigos</span></a>
+  <nav class="links" aria-label="Menú"><a href="#historia">História</a><a href="#musicos">Músicos</a><a href="#eventos">Eventos</a><a href="#fotos">Fotos</a><a href="#preguntas">Dúvidas</a></nav>
+  <div class="top-act"><nav class="lang" aria-label="Idioma / Idioma"><a href="../index.html" hreflang="es" lang="es" >ES</a><a href="index.html" hreflang="pt-BR" lang="pt-BR" aria-current=page>PT</a></nav><a class="btn btn-sm btn-red" href="#contacto">Pedir orçamento</a>
+   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet"><span class="sr">Menu</span><i></i><i></i></button></div>
+ </div>
+ <div class="sheet" id="sheet" hidden><nav aria-label="Menu"><a href="#historia">História</a><a href="#musicos">Músicos</a><a href="#eventos">Eventos</a><a href="#fotos">Fotos</a><a href="#preguntas">Dúvidas</a><a href="#contacto">Pedir orçamento</a></nav></div>
+</header>
+
+<main id="main">
+<section class="hero" aria-labelledby="h1">
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <h1 id="h1"><span class="l">A essência do</span><em>samba</em><span class="l">brasileiro</span></h1>
+   <p class="lead">Seis músicos brasileiros, uma roda de amigos e um repertório de samba e pagode para casamentos, shows, festivais e noites de balada.</p>
+   <div class="hero-cta">
+    <a class="btn btn-red" href="https://wa.me/34622298975?text=Ol%C3%A1%2C%20Samba%20dos%20Amigos%21%20Gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>Pedir orçamento pelo WhatsApp</span></a>
+    <a class="btn btn-line" href="#musicos"><span>Conhecer os músicos</span><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="m7 7 10 10" />  <path d="M17 7v10H7" /></svg></a>
+   </div>
+  </div>
+  <div class="stage">
+   <img class="stage-img" src="../img/grupo-sofa.webp" width="1242" height="845" alt="Os seis músicos do Grupo Samba dos Amigos sentados com seus instrumentos" fetchpriority="high" decoding="async">
+   <img class="seal" src="../img/logo.webp" width="240" height="240" alt="Logotipo Samba dos Amigos">
+  </div>
+ </div>
+ <div class="wrap hero-foot">
+  <ul class="instr" aria-label="Instrumentos"><li>Cavaquinho</li><li>Violão</li><li>Reco-reco</li><li>Pandeiro</li><li>Surdo</li><li>Cuíca</li><li>Tam Tam</li></ul>
+  <ul class="facts"><li>Nos palcos desde 2023</li><li>Da Corunha para toda a Espanha e Portugal</li><li>Seis músicos ao vivo</li></ul>
+ </div>
+</section>
+
+<section class="story" id="historia" aria-labelledby="h-story">
+ <div class="wrap story-grid">
+  <div class="story-txt">
+   <h2 id="h-story">Uma história de amizade, música e paixão pelo Brasil</h2>
+   <p>O Grupo Samba dos Amigos nasceu da amizade e da paixão em comum pela música brasileira, especialmente pelo samba e seus ritmos tradicionais.</p><p>Pouco depois do começo, a pandemia de COVID-19 obrigou o grupo a parar e a adiar os planos de levar sua música ao público. Mas a paixão continuou viva.</p><p>Em setembro de 2023 o grupo voltou aos palcos com a energia renovada. Desde então leva a alegria, o ritmo e a essência da música brasileira a palcos da região da Corunha, do resto da Galícia e de outros lugares da Espanha e de Portugal.</p>
+   <blockquote><p>Através do samba queremos compartilhar um pouquinho da nossa cultura, das nossas raízes e do nosso jeito de sentir e viver a música.</p></blockquote>
+  </div>
+  <figure class="story-img"><img src="../img/grupo-de-pie-640.webp" srcset="../img/grupo-de-pie-640.webp 640w, ../img/grupo-de-pie.webp 1066w" sizes="(min-width:900px) 440px, 90vw" width="640" height="961" alt="Os seis integrantes do grupo, em pé, de camiseta bege" loading="lazy" decoding="async"></figure>
+ </div>
+</section>
+
+<section class="members" id="musicos" aria-labelledby="h-mem">
+ <div class="wrap">
+  <div class="sec-head"><h2 id="h-mem">Seis músicos, uma só <em>roda</em></h2><p>Cada integrante traz sua personalidade, seu instrumento e sua formação. Juntos criam uma mistura de sons e vozes que representa a riqueza da música brasileira.</p></div>
+  <ul class="mem-grid"><li class="member">
+<figure><img src="../img/cavaquinho-640.webp" srcset="../img/cavaquinho-640.webp 640w, ../img/cavaquinho.webp 1066w" sizes="(min-width:1000px) 380px, (min-width:640px) 45vw, 46vw" width="640" height="960" alt="Tiago · Cavaquinho e voz" loading="lazy" decoding="async"></figure>
+<h3>Tiago</h3><p class="inst">Cavaquinho e voz</p><p class="bio">Formado pela Universidade Federal do Rio Grande do Sul (UFRGS).</p></li><li class="member">
+<figure><img src="../img/violao-640.webp" srcset="../img/violao-640.webp 640w, ../img/violao.webp 1066w" sizes="(min-width:1000px) 380px, (min-width:640px) 45vw, 46vw" width="640" height="960" alt="Vinicius · Violão e voz" loading="lazy" decoding="async"></figure>
+<h3>Vinicius</h3><p class="inst">Violão e voz</p><p class="bio">Registrado na Ordem dos Músicos do Brasil (OMB), em Ipatinga, Minas Gerais.</p></li><li class="member">
+<figure><img src="../img/reco-reco-640.webp" srcset="../img/reco-reco-640.webp 640w, ../img/reco-reco.webp 1066w" sizes="(min-width:1000px) 380px, (min-width:640px) 45vw, 46vw" width="640" height="960" alt="Boni · Reco-reco e voz" loading="lazy" decoding="async"></figure>
+<h3>Boni</h3><p class="inst">Reco-reco e voz</p><p class="bio">Licenciado pela Universidade Estadual do Maranhão (UEMA).</p></li><li class="member">
+<figure><img src="../img/pandeiro-640.webp" srcset="../img/pandeiro-640.webp 640w, ../img/pandeiro.webp 1066w" sizes="(min-width:1000px) 380px, (min-width:640px) 45vw, 46vw" width="640" height="960" alt="James Walker · Pandeiro" loading="lazy" decoding="async"></figure>
+<h3>James Walker</h3><p class="inst">Pandeiro</p><p class="bio">Formação em Educação Musical e estudos de Música na Universidade Federal de Goiás (UFG).</p></li><li class="member">
+<figure><img src="../img/cuica-640.webp" srcset="../img/cuica-640.webp 640w, ../img/cuica.webp 1066w" sizes="(min-width:1000px) 380px, (min-width:640px) 45vw, 46vw" width="640" height="960" alt="Marcos · Surdo e cuíca" loading="lazy" decoding="async"></figure>
+<h3>Marcos</h3><p class="inst">Surdo e cuíca</p></li><li class="member">
+<figure><img src="../img/tantan-640.webp" srcset="../img/tantan-640.webp 640w, ../img/tantan.webp 1066w" sizes="(min-width:1000px) 380px, (min-width:640px) 45vw, 46vw" width="640" height="960" alt="Junior · Tam Tam" loading="lazy" decoding="async"></figure>
+<h3>Junior</h3><p class="inst">Tam Tam</p></li></ul>
+ </div>
+</section>
+
+<section class="events" id="eventos" aria-labelledby="h-ev">
+ <div class="wrap">
+  <div class="sec-head"><h2 id="h-ev">Samba ao vivo para o seu evento</h2><p>Um repertório amplo e um formato que se adapta a cada celebração.</p></div>
+  <ul class="ev-list"><li><h3>Casamentos</h3><p>Do coquetel à pista: o samba transforma a celebração em festa.</p></li><li><h3>Shows e festivais</h3><p>Uma apresentação cheia de energia para palcos grandes e público de todas as idades.</p></li><li><h3>Bares, casas de show e baladas</h3><p>Noites de samba e pagode com a pista cheia do começo ao fim.</p></li><li><h3>Festas particulares e empresas</h3><p>Aniversários, bodas e eventos corporativos no formato que você precisar.</p></li></ul>
+  <div class="ev-foot">
+   <div class="venues"><p>Já tocamos em</p><ul><li>Sala Tebras · Lugo</li><li>La Duna Beach Club</li><li>Banana Verde · Sanxenxo</li><li>MyClub</li><li>Oculto</li></ul></div>
+   <a class="btn btn-red" href="#contacto"><span>Consultar disponibilidade</span><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M5 12h14" />  <path d="m12 5 7 7-7 7" /></svg></a>
+  </div>
+ </div>
+</section>
+
+<section class="photos" id="fotos" aria-labelledby="h-ph">
+ <div class="wrap">
+  <div class="sec-head"><h2 id="h-ph">Fotos oficiais do grupo</h2><p>Vai fazer um evento com a gente? Baixe as fotos para o seu cartaz ou suas redes.</p></div>
+  <div class="ph-grid"><figure class="ph"><button class="ph-open" type="button" data-i="0" data-full="../img/grupo-de-pie.webp" aria-label="Ver foto: Os seis músicos do Grupo Samba dos Amigos de camiseta bege"><img src="../img/grupo-de-pie-640.webp" width="640" height="961" alt="Os seis músicos do Grupo Samba dos Amigos de camiseta bege" loading="lazy" decoding="async"></button>
+<a class="ph-dl" href="../fotos/samba-dos-amigos-grupo-de-pie.jpg" download><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 15V3" />  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <path d="m7 10 5 5 5-5" /></svg><span>Baixar</span></a></figure><figure class="ph"><button class="ph-open" type="button" data-i="1" data-full="../img/cavaquinho.webp" aria-label="Ver foto: Tiago com seu cavaquinho"><img src="../img/cavaquinho-640.webp" width="640" height="961" alt="Tiago com seu cavaquinho" loading="lazy" decoding="async"></button>
+<a class="ph-dl" href="../fotos/samba-dos-amigos-cavaquinho.jpg" download><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 15V3" />  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <path d="m7 10 5 5 5-5" /></svg><span>Baixar</span></a></figure><figure class="ph"><button class="ph-open" type="button" data-i="2" data-full="../img/pandeiro.webp" aria-label="Ver foto: James Walker com o pandeiro"><img src="../img/pandeiro-640.webp" width="640" height="961" alt="James Walker com o pandeiro" loading="lazy" decoding="async"></button>
+<a class="ph-dl" href="../fotos/samba-dos-amigos-pandeiro.jpg" download><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 15V3" />  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <path d="m7 10 5 5 5-5" /></svg><span>Baixar</span></a></figure><figure class="ph"><button class="ph-open" type="button" data-i="3" data-full="../img/violao.webp" aria-label="Ver foto: Vinicius com o violão"><img src="../img/violao-640.webp" width="640" height="961" alt="Vinicius com o violão" loading="lazy" decoding="async"></button>
+<a class="ph-dl" href="../fotos/samba-dos-amigos-violao.jpg" download><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 15V3" />  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <path d="m7 10 5 5 5-5" /></svg><span>Baixar</span></a></figure><figure class="ph"><button class="ph-open" type="button" data-i="4" data-full="../img/reco-reco.webp" aria-label="Ver foto: Boni com o reco-reco"><img src="../img/reco-reco-640.webp" width="640" height="960" alt="Boni com o reco-reco" loading="lazy" decoding="async"></button>
+<a class="ph-dl" href="../fotos/samba-dos-amigos-reco-reco.jpg" download><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 15V3" />  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <path d="m7 10 5 5 5-5" /></svg><span>Baixar</span></a></figure><figure class="ph"><button class="ph-open" type="button" data-i="5" data-full="../img/cuica.webp" aria-label="Ver foto: Marcos com a cuíca"><img src="../img/cuica-640.webp" width="640" height="960" alt="Marcos com a cuíca" loading="lazy" decoding="async"></button>
+<a class="ph-dl" href="../fotos/samba-dos-amigos-cuica.jpg" download><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 15V3" />  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <path d="m7 10 5 5 5-5" /></svg><span>Baixar</span></a></figure><figure class="ph"><button class="ph-open" type="button" data-i="6" data-full="../img/tantan.webp" aria-label="Ver foto: Junior com o tam tam"><img src="../img/tantan-640.webp" width="640" height="961" alt="Junior com o tam tam" loading="lazy" decoding="async"></button>
+<a class="ph-dl" href="../fotos/samba-dos-amigos-tantan.jpg" download><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 15V3" />  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <path d="m7 10 5 5 5-5" /></svg><span>Baixar</span></a></figure></div>
+  <div class="ph-all"><a class="btn btn-line" href="../fotos/samba-dos-amigos-fotos.zip" download><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M12 15V3" />  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <path d="m7 10 5 5 5-5" /></svg><span>Baixar todas (ZIP)</span></a></div>
+ </div>
+</section>
+
+<section class="faq" id="preguntas" aria-labelledby="h-faq">
+ <div class="wrap faq-grid">
+  <h2 id="h-faq">Dúvidas frequentes</h2>
+  <div class="faq-list"><details><summary><span>Quanto custa contratar o grupo?</span><svg class="ic pl" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M5 12h14" />  <path d="M12 5v14" /></svg></summary><p>Depende da data, do local, da duração e do formato do evento. Mande essas informações pelo WhatsApp e a gente envia um orçamento sob medida.</p></details><details><summary><span>Quanto tempo dura o show?</span><svg class="ic pl" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M5 12h14" />  <path d="M12 5v14" /></svg></summary><p>A gente se adapta ao seu evento. Conte o horário que você imagina e propomos a duração e as entradas que combinam melhor.</p></details><details><summary><span>Quantos músicos são?</span><svg class="ic pl" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M5 12h14" />  <path d="M12 5v14" /></svg></summary><p>Somos seis músicos ao vivo: cavaquinho, violão, reco-reco, pandeiro, surdo, cuíca e tam tam, com várias vozes.</p></details><details><summary><span>Onde vocês tocam?</span><svg class="ic pl" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M5 12h14" />  <path d="M12 5v14" /></svg></summary><p>Estamos na região da Corunha e tocamos em toda a Galícia, em outros lugares da Espanha e em Portugal.</p></details><details><summary><span>Que música vocês tocam?</span><svg class="ic pl" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M5 12h14" />  <path d="M12 5v14" /></svg></summary><p>Samba e pagode, com os ritmos tradicionais do Brasil e um repertório amplo para cada momento do seu evento.</p></details></div>
+ </div>
+</section>
+
+<section class="contact" id="contacto" aria-labelledby="h-ct">
+ <div class="wrap ct-grid">
+  <div class="ct-intro">
+   <h2 id="h-ct">Conte sobre o seu evento</h2>
+   <p>Preencha o básico e a gente abre a mensagem pronta no WhatsApp. Quanto mais detalhes, mais certeiro o orçamento.</p>
+   <div class="direct">
+    <p class="direct-t">Prefere falar direto com a gente?</p>
+    <p class="who">Junior, atendimento de eventos</p>
+    <div class="num"><a href="https://wa.me/34622298975?text=Ol%C3%A1%2C%20Samba%20dos%20Amigos%21%20Gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>+34 622 29 89 75</span></a>
+     <button class="copy" type="button" data-num="+34 622 29 89 75"><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />  <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg><span>Copiar número</span></button></div>
+    <a class="line-link" href="mailto:sambadeamigos24@outlook.es"><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />  <rect x="2" y="4" width="20" height="16" rx="2" /></svg><span>sambadeamigos24@outlook.es</span></a>
+    <a class="line-link" href="https://www.instagram.com/grupo__samba_dos_amigos/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg><span>@grupo__samba_dos_amigos</span></a>
+   </div>
+  </div>
+  <form class="quote" id="quote" novalidate data-wa="34622298975">
+   <fieldset><legend>Tipo de evento</legend><div class="chips"><label class="chip"><input type="radio" name="tipo" value="Casamento"><span>Casamento</span></label><label class="chip"><input type="radio" name="tipo" value="Show ou festival"><span>Show ou festival</span></label><label class="chip"><input type="radio" name="tipo" value="Bar ou balada"><span>Bar ou balada</span></label><label class="chip"><input type="radio" name="tipo" value="Festa particular"><span>Festa particular</span></label><label class="chip"><input type="radio" name="tipo" value="Evento corporativo"><span>Evento corporativo</span></label><label class="chip"><input type="radio" name="tipo" value="Outro"><span>Outro</span></label></div><p class="err" id="err-tipo" role="alert"></p></fieldset>
+   <div class="two">
+    <label class="fld"><span>Data</span><input type="date" name="fecha"></label>
+    <label class="fld"><span>Cidade ou local</span><input type="text" name="lugar" placeholder="Ex.: Corunha, Santiago, Porto…" autocomplete="address-level2"></label>
+   </div>
+   <fieldset><legend>Duração aproximada</legend><div class="chips"><label class="chip"><input type="radio" name="dur" value="1 hora"><span>1 hora</span></label><label class="chip"><input type="radio" name="dur" value="2 horas"><span>2 horas</span></label><label class="chip"><input type="radio" name="dur" value="3 horas ou mais"><span>3 horas ou mais</span></label><label class="chip"><input type="radio" name="dur" value="Ainda não sei"><span>Ainda não sei</span></label></div></fieldset>
+   <label class="fld"><span>Seu nome</span><input type="text" name="nombre" placeholder="Como você se chama" autocomplete="name" aria-describedby="err-nombre"></label>
+   <p class="err" id="err-nombre" role="alert"></p>
+   <label class="fld"><span>Detalhes <small>(opcional)</small></span><textarea name="msg" rows="3" placeholder="Número de convidados, horário, se é ao ar livre…"></textarea></label>
+   <button class="btn btn-red btn-full" type="submit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>Enviar pelo WhatsApp</span></button>
+  </form>
+ </div>
+</section>
+
+<section class="ig" aria-labelledby="h-ig">
+ <div class="wrap ig-in">
+  <div><h2 id="h-ig">Siga a gente no Instagram</h2><p>Vídeos dos nossos shows, cartazes e as próximas datas.</p></div>
+  <a class="btn btn-red" href="https://www.instagram.com/grupo__samba_dos_amigos/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg><span>@grupo__samba_dos_amigos</span></a>
+ </div>
+</section>
+</main>
+
+<footer class="foot">
+ <div class="wrap foot-in">
+  <div class="foot-brand"><img src="../img/logo.webp" width="88" height="88" alt="Samba dos Amigos" loading="lazy"><p>A essência do samba brasileiro. Música, cultura, amizade e tradição brasileira.</p></div>
+  <div class="foot-links">
+   <a href="https://wa.me/34622298975?text=Ol%C3%A1%2C%20Samba%20dos%20Amigos%21%20Gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>+34 622 29 89 75</span></a>
+   <a href="mailto:sambadeamigos24@outlook.es"><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />  <rect x="2" y="4" width="20" height="16" rx="2" /></svg><span>sambadeamigos24@outlook.es</span></a>
+   <a href="https://www.instagram.com/grupo__samba_dos_amigos/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg><span>Instagram</span></a>
+   <a href="../index.html" hreflang="es"><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="m5 8 6 6" />  <path d="m4 14 6-6 2-3" />  <path d="M2 5h12" />  <path d="M7 2h1" />  <path d="m22 22-5-10-5 10" />  <path d="M14 18h6" /></svg><span>Español</span></a>
+  </div>
+ </div>
+ <div class="wrap foot-bot"><p>© 2026 Grupo Samba dos Amigos. Todos os direitos reservados.</p><p>Site por <a href="https://www.instagram.com/duh.lab/" target="_blank" rel="noopener">Duh Lab</a></p></div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/34622298975?text=Ol%C3%A1%2C%20Samba%20dos%20Amigos%21%20Gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="WhatsApp · Peça seu orçamento"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg><span>Peça seu orçamento</span></a>
+
+<dialog class="lb" id="lb" aria-label="Fotos">
+ <img id="lb-img" alt="">
+ <button class="lb-x" type="button" data-close aria-label="Fechar"><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M18 6 6 18" />  <path d="m6 6 12 12" /></svg></button>
+ <button class="lb-nav lb-prev" type="button" aria-label="Foto anterior"><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="m15 18-6-6 6-6" /></svg></button>
+ <button class="lb-nav lb-next" type="button" aria-label="Próxima foto"><svg class="ic" aria-hidden="true" focusable="false"    xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="m9 18 6-6-6-6" /></svg></button>
+</dialog>
+<script>window.I18N={"wa_hello": "Olá, Samba dos Amigos! Gostaria de pedir um orçamento.", "err_type": "Escolha o tipo de evento para continuar.", "err_name": "Escreva seu nome para a gente saber com quem está falando.", "m_event": "Evento", "m_date": "Data", "m_place": "Local", "m_dur": "Duração", "m_name": "Nome", "m_msg": "Detalhes", "copied": "Número copiado", "copy": "Copiar número"};(()=>{
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)],t=window.I18N;
+// topo
+const top=$('.top');const onS=()=>top.classList.toggle('is-scrolled',scrollY>8);onS();addEventListener('scroll',onS,{passive:true});
+// menu celular
+const mb=$('.menu-btn'),sh=$('#sheet');
+const setM=o=>{mb.setAttribute('aria-expanded',o);sh.hidden=!o};
+mb.addEventListener('click',()=>setM(mb.getAttribute('aria-expanded')!=='true'));
+$$('a',sh).forEach(a=>a.addEventListener('click',()=>setM(false)));
+addEventListener('keydown',e=>{if(e.key==='Escape')setM(false)});
+// whatsapp flutuante se abre um pouco depois
+const wf=$('.wa-float');setTimeout(()=>{wf.classList.add('is-open');setTimeout(()=>wf.classList.remove('is-open'),4200)},3500);
+// copiar número
+$$('.copy').forEach(b=>b.addEventListener('click',async()=>{
+ const lab=$('span',b);try{await navigator.clipboard.writeText(b.dataset.num.replace(/\s/g,''))}catch(e){const r=document.createRange();r.selectNodeContents($('.num a span'));const s=getSelection();s.removeAllRanges();s.addRange(r);document.execCommand('copy')}
+ b.classList.add('ok');lab.textContent=t.copied;setTimeout(()=>{b.classList.remove('ok');lab.textContent=t.copy},2200);
+}));
+// formulário -> WhatsApp
+const f=$('#quote');if(f){
+ const d=$('input[type=date]',f),z=n=>String(n).padStart(2,'0'),now=new Date();d.min=`${now.getFullYear()}-${z(now.getMonth()+1)}-${z(now.getDate())}`;
+ const eT=$('#err-tipo'),eN=$('#err-nombre'),nm=f.elements.nombre;
+ f.addEventListener('change',e=>{if(e.target.name==='tipo')eT.textContent=''});
+ nm.addEventListener('input',()=>{eN.textContent='';nm.removeAttribute('aria-invalid')});
+ f.addEventListener('submit',e=>{
+  e.preventDefault();
+  const tipo=(f.elements.tipo.value||'').trim(),nome=nm.value.trim();let ok=true;
+  if(!tipo){eT.textContent=t.err_type;ok=false}
+  if(!nome){eN.textContent=t.err_name;nm.setAttribute('aria-invalid','true');ok=false}
+  if(!ok){(tipo?nm:$('.chip input',f)).focus();return}
+  let data='';if(d.value){const[y,m,dd]=d.value.split('-');data=`${dd}/${m}/${y}`}
+  const L=[t.wa_hello,'',`• ${t.m_event}: ${tipo}`];
+  if(data)L.push(`• ${t.m_date}: ${data}`);
+  const lug=f.elements.lugar.value.trim();if(lug)L.push(`• ${t.m_place}: ${lug}`);
+  const du=f.elements.dur.value;if(du)L.push(`• ${t.m_dur}: ${du}`);
+  L.push(`• ${t.m_name}: ${nome}`);
+  const msg=f.elements.msg.value.trim();if(msg)L.push(`• ${t.m_msg}: ${msg}`);
+  const a=document.createElement('a');a.href=`https://wa.me/${f.dataset.wa}?text=${encodeURIComponent(L.join('\n'))}`;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+ });
+}
+// lightbox
+const lb=$('#lb'),li=$('#lb-img'),items=$$('.ph-open');let cur=0;
+const show=i=>{cur=(i+items.length)%items.length;const b=items[cur],im=$('img',b);li.src=b.dataset.full;li.alt=im.alt};
+items.forEach((b,i)=>b.addEventListener('click',()=>{show(i);lb.showModal()}));
+$('.lb-prev').addEventListener('click',()=>show(cur-1));$('.lb-next').addEventListener('click',()=>show(cur+1));
+$('[data-close]',lb).addEventListener('click',()=>lb.close());
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+lb.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+let sx=0;lb.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1))});
+})();
+</script>
+</body>
+</html>
